@@ -17,6 +17,11 @@ const GiphySearch: React.FC = () => {
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search for a GIFs..."
                 />
+
+                <button
+                    type="submit">
+                    Search
+                </button>
             </form>
         </div>
     )
