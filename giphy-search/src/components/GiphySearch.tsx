@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import handleSearch from "../utils/handleSearch";
+import {Simulate} from "react-dom/test-utils";
+import copy = Simulate.copy;
+import copyToClipBoard from "../utils/copyToClipBoard";
+import './GiphySearch.css';
 
 // from: https://developers.giphy.com/docs/api/endpoint/#search
 interface GifObject {
@@ -26,11 +30,13 @@ const GiphySearch: React.FC = () => {
             <h1>Giphy Search</h1>
 
             <form
-                onSubmit={() => {
+                onSubmit={(e) => {
+                    e.preventDefault();
                     handleSearch(
                         query,
                         setLoading,
                         setError,
+                        setGifs
                     )
                 }}>
                 <input
@@ -45,6 +51,31 @@ const GiphySearch: React.FC = () => {
                     Search
                 </button>
             </form>
+
+            {error && (
+                <div>
+                    {error}
+                </div>)}
+
+            {loading && (
+                <div>
+                    <p>Loading...</p>
+                </div>
+            )}
+
+            <div>
+                {gifs.map((gif) => (
+                    <div key={gif.id}>
+                        <img src={gif.images.fixed_height.url} alt="GIF"/>
+                        <div>
+                            <button
+                                onClick={() => copyToClipBoard(gif.bitly_url)}>
+                                Copy URL
+                            </button>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
