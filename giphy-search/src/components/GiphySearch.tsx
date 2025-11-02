@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import handleSearch from "../../utils/handleSearch";
+import handleSearch from "../utils/handleSearch";
 
 // from: https://developers.giphy.com/docs/api/endpoint/#search
 interface GifObject {
@@ -27,7 +27,11 @@ const GiphySearch: React.FC = () => {
 
             <form
                 onSubmit={() => {
-                    handleSearch(query)
+                    handleSearch(
+                        query,
+                        setLoading,
+                        setError,
+                    )
                 }}>
                 <input
                     type="text"
