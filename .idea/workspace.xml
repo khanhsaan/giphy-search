@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="845503b9-34a5-4e73-8130-efd97344a30a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/babel-loader/8528b58e1d134d2ae7078b84c29bbc8a07133ed43f59e3c31b0bdb621c9bacf9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/babel-loader/bfa33f336edea6339dcb6ef323c0ce093b634dcecdfe4764a249ce1cc95c0b11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/babel-loader/ec4d2fd6e1d3788d90e5fdb9639b1d99d82038f02043c81104805afd55d1e053.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/babel-loader/f51b95d7bb25a0d39a636af5faa29d6cf8e3243bcf1e0c2d72a0185bbde8404b.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/2.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/3.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/tsconfig.tsbuildinfo" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="34tqMVwcYXia4cy20blNCisQbui" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.sync",
+    "ts.external.directory.path": "/Users/anthonytran/Desktop/giphy-search/giphy-search/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/giphy-search" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="845503b9-34a5-4e73-8130-efd97344a30a" name="Changes" comment="" />
+      <created>1762043167429</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762043167429</updated>
+      <workItem from="1762043168517" duration="7509000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
