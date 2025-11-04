@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import handleSearch from "../utils/handleSearch";
-import {Simulate} from "react-dom/test-utils";
-import copy = Simulate.copy;
 import copyToClipBoard from "../utils/copyToClipBoard";
 import './GiphySearch.css';
-import useAnimatedPlaceHolder from "./useAnimatedPlaceHolder";
+import useAnimatedPlaceHolder from "../hooks/useAnimatedPlaceHolder";
 
 // from: https://developers.giphy.com/docs/api/endpoint/#search
 interface GifObject {
@@ -24,7 +21,7 @@ const GiphySearch: React.FC = () => {
     const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
     const[query, setQuery] = useState<string>('');
-    const[loading, setLoading] = useState<Boolean>(false);
+    const[loading, setLoading] = useState<boolean>(false);
     const[error, setError] = useState<string>('');
     const[gifs, setGifs] = useState<GifObject[]>([]);
 
@@ -103,13 +100,10 @@ const GiphySearch: React.FC = () => {
                                  height: '100%',
                                  objectFit: 'cover'
                              }}/>
-
-                    <div>
-                </div>
+                    </div>
+                ))}
             </div>
-        ))}
-    </div>
-    </div>
+        </div>
     )
 }
 
