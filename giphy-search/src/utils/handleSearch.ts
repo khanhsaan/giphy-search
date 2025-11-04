@@ -33,14 +33,12 @@ const handleSearch = async(
         ]);
 
         if(response.data){
-            console.log(response.data)
+            setGifs(response.data.data);
         } else {
-            console.warn('There is no response!')
+            setError("Failed to fetch searched GIFS");
         }
-        setGifs(response.data.data);
     } catch (err){
-        setError('Failed to fetch GIFs');
-        console.error('Error fetching GIFs: ', err);
+        setError('Failed to fetch searched GIFs');
     } finally {
         setLoading(false);
     }

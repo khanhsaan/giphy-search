@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import handleSearch from "../utils/handleSearch";
 import copyToClipBoard from "../utils/copyToClipBoard";
 import './GiphySearch.css';
 import useAnimatedPlaceHolder from "../hooks/useAnimatedPlaceHolder";
+import handleTrendingGifs from "../utils/handleTrendingGifs";
 
 // from: https://developers.giphy.com/docs/api/endpoint/#search
 interface GifObject {
@@ -34,6 +35,12 @@ const GiphySearch: React.FC = () => {
     ];
     let animatedPlaceHolder = useAnimatedPlaceHolder(phrases);
 
+    useEffect(() => {
+        handleTrendingGifs(
+            setLoading,
+            setError,
+            setGifs)
+    }, []);
     return (
         <div className="giphy-search">
             <h1>Search for a GIF!</h1>
