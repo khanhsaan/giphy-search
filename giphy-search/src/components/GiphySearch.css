@@ -69,17 +69,16 @@ h1 {
 }
 
 .results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    column-count: 4;
+    column-gap: 16px;
+    padding: 20px;
 }
 
 .gif-card {
-    border: 1px solid #ddd;
+    margin-bottom: 16px;
+    transition: transform 0.2s;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s;
-    padding: 10px;
 }
 
 .gif-card:hover {
