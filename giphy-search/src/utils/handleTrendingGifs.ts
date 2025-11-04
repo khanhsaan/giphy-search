@@ -6,7 +6,7 @@ const handleTrendingGifs = async (
     setError: (error: string) => void,
     setGifs:(gifs: any[]) => void
 ) => {
-    const API_KEY = process.env["REACT_APP_GIPHY_API_KEY "];
+    const API_KEY = process.env["REACT_APP_GIPHY_API_KEY"];
 
     setLoading(true);
     setError('');
