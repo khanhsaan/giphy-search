@@ -23,13 +23,14 @@ const GiphySearch: React.FC = () => {
     const[query, setQuery] = useState<string>('');
     const[loading, setLoading] = useState<Boolean>(false);
     const[error, setError] = useState<string>('');
-    const[gifs, setGifs] = useState<any[]>([]);
+    const[gifs, setGifs] = useState<GifObject[]>([]);
 
     return (
-        <div>
+        <div className="giphy-search">
             <h1>Giphy Search</h1>
 
             <form
+                className= "search-form"
                 onSubmit={(e) => {
                     e.preventDefault();
                     handleSearch(
@@ -40,6 +41,7 @@ const GiphySearch: React.FC = () => {
                     )
                 }}>
                 <input
+                    className="search-input"
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -47,28 +49,36 @@ const GiphySearch: React.FC = () => {
                 />
 
                 <button
+                    className="search-button"
                     type="submit">
                     Search
                 </button>
             </form>
 
             {error && (
-                <div>
+                <div
+                    className="error">
                     {error}
                 </div>)}
 
             {loading && (
-                <div>
-                    <p>Loading...</p>
+                <div className="loader">
+                    <div className="spinner">
+                        <p>Loading...</p>
+                    </div>
                 </div>
             )}
 
-            <div>
+            <div
+                className="results-grid">
                 {gifs.map((gif) => (
-                    <div key={gif.id}>
+                    <div
+                        className="gif-card"
+                        key={gif.id}>
                         <img src={gif.images.fixed_height.url} alt="GIF"/>
                         <div>
                             <button
+                                className="copy-btn"
                                 onClick={() => copyToClipBoard(gif.bitly_url)}>
                                 Copy URL
                             </button>
