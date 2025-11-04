@@ -79,6 +79,13 @@ const GiphySearch: React.FC = () => {
                          style={{
                             height: `${gif.images.fixed_width.height}px`
                         }}>
+
+                        <button
+                            className="copy-btn"
+                            onClick={() => copyToClipBoard(gif.bitly_url)}>
+                            Copy URL
+                        </button>
+
                         <img src={gif.images.fixed_width.url}
                              alt="GIF"
                              style={{
@@ -86,17 +93,13 @@ const GiphySearch: React.FC = () => {
                                  height: '100%',
                                  objectFit: 'cover'
                              }}/>
-                        <div>
-                            <button
-                                className="copy-btn"
-                                onClick={() => copyToClipBoard(gif.bitly_url)}>
-                                Copy URL
-                            </button>
-                        </div>
-                    </div>
-                ))}
+
+                    <div>
+                </div>
             </div>
-        </div>
+        ))}
+    </div>
+    </div>
     )
 }
 
