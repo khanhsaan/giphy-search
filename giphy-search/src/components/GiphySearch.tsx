@@ -10,8 +10,10 @@ import './GiphySearch.css';
 interface GifObject {
     id: string,
     images: {
-        fixed_height: {
+        fixed_width: {
             url: string;
+            height: string;
+            width: string;
         }
     };
     url: string;
@@ -75,7 +77,7 @@ const GiphySearch: React.FC = () => {
                     <div
                         className="gif-card"
                         key={gif.id}>
-                        <img src={gif.images.fixed_height.url} alt="GIF"/>
+                        <img src={gif.images.fixed_width.url} alt="GIF"/>
                         <div>
                             <button
                                 className="copy-btn"
