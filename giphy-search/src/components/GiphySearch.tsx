@@ -74,10 +74,18 @@ const GiphySearch: React.FC = () => {
             <div
                 className="results-grid">
                 {gifs.map((gif) => (
-                    <div
-                        className="gif-card"
-                        key={gif.id}>
-                        <img src={gif.images.fixed_width.url} alt="GIF"/>
+                    <div className="gif-card"
+                         key={gif.id}
+                         style={{
+                            height: `${gif.images.fixed_width.height}px`
+                        }}>
+                        <img src={gif.images.fixed_width.url}
+                             alt="GIF"
+                             style={{
+                                 width: '100%',
+                                 height: '100%',
+                                 objectFit: 'cover'
+                             }}/>
                         <div>
                             <button
                                 className="copy-btn"
