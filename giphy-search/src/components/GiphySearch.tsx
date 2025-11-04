@@ -5,6 +5,7 @@ import {Simulate} from "react-dom/test-utils";
 import copy = Simulate.copy;
 import copyToClipBoard from "../utils/copyToClipBoard";
 import './GiphySearch.css';
+import useAnimatedPlaceHolder from "./useAnimatedPlaceHolder";
 
 // from: https://developers.giphy.com/docs/api/endpoint/#search
 interface GifObject {
@@ -27,9 +28,18 @@ const GiphySearch: React.FC = () => {
     const[error, setError] = useState<string>('');
     const[gifs, setGifs] = useState<GifObject[]>([]);
 
+    const phrases = [
+        "cute dogs",
+        "cute cats",
+        "not scary clowns",
+        "funny memes",
+        "happy dances",
+    ];
+    let animatedPlaceHolder = useAnimatedPlaceHolder(phrases);
+
     return (
         <div className="giphy-search">
-            <h1>Giphy Search</h1>
+            <h1>Search for a GIF!</h1>
 
             <form
                 className= "search-form"
@@ -47,7 +57,7 @@ const GiphySearch: React.FC = () => {
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search for a GIFs..."
+                    placeholder={animatedPlaceHolder}
                 />
 
                 <button

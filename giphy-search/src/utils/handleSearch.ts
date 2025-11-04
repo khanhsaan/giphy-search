@@ -18,7 +18,7 @@ const handleSearch = async(
 
     try{
         const minDelay = new Promise(resolve => setTimeout(resolve, 500));
-        const [response] = await Promise.all([
+        const [response,_] = await Promise.all([
             axios.get(
             `https://api.giphy.com/v1/gifs/search`,
             {
@@ -26,7 +26,7 @@ const handleSearch = async(
                     // eslint-disable-next-line camelcase
                     api_key: API_KEY,
                     q: query,
-                    limit: 20
+                    limit: 50
                 }
             }),
             minDelay
