@@ -17,7 +17,9 @@ const handleSearch = async(
     setError('');
 
     try{
-        const response = await axios.get(
+        const minDelay = new Promise(resolve => setTimeout(resolve, 500));
+        const [response] = await Promise.all([
+            axios.get(
             `https://api.giphy.com/v1/gifs/search`,
             {
                 params: {
@@ -26,8 +28,10 @@ const handleSearch = async(
                     q: query,
                     limit: 20
                 }
-            }
-        );
+            }),
+            minDelay
+        ]);
+
         if(response.data){
             console.log(response.data)
         } else {
