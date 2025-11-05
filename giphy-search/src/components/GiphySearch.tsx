@@ -51,6 +51,7 @@ const GiphySearch: React.FC = () => {
                 onSubmit={(e) => {
                     e.preventDefault();
                     handleSearch(
+                        API_KEY,
                         query,
                         setLoading,
                         setError,
@@ -81,7 +82,6 @@ const GiphySearch: React.FC = () => {
             {loading && (
                 <div className="loader">
                     <div className="spinner">
-                        <p>Loading...</p>
                     </div>
                 </div>
             )}

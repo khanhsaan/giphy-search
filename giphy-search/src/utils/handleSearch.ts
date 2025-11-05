@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 const handleSearch = async(
+    API_KEY: string,
     query: string,
     setLoading:(loading: boolean) => void,
     setError: (error: string) => void,
     setGifs:(gifs: any[])=> void
 ) => {
-    const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
     // check if the query is not empty
     if(!query.trim()){
@@ -17,7 +17,7 @@ const handleSearch = async(
     setError('');
 
     try{
-        const minDelay = new Promise(resolve => setTimeout(resolve, 500));
+        const minDelay = new Promise(resolve => setTimeout(resolve, 1000));
         const [response,_] = await Promise.all([
             axios.get(
             `https://api.giphy.com/v1/gifs/search`,
