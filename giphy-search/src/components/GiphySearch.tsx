@@ -74,8 +74,7 @@ const GiphySearch: React.FC = () => {
             </form>
 
             {error && (
-                <div
-                    className="error">
+                <div className="error">
                     {error}
                 </div>)}
 

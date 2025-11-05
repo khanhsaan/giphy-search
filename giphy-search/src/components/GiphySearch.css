@@ -61,8 +61,8 @@ h1 {
 
 .error {
     padding: 15px;
-    background-color: #ffebee;
-    color: #c62828;
+    background-color: indianred;
+    color: darkred;
     border-radius: 8px;
     margin-bottom: 20px;
     text-align: center;
