@@ -37,10 +37,11 @@ const GiphySearch: React.FC = () => {
 
     useEffect(() => {
         handleTrendingGifs(
+            API_KEY,
             setLoading,
             setError,
             setGifs)
-    }, []);
+    }, [API_KEY]);
     return (
         <div className="giphy-search">
             <h1>Search for a GIF!</h1>

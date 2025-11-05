@@ -2,11 +2,11 @@ import axios from "axios";
 import {response} from "express";
 
 const handleTrendingGifs = async (
+    API_KEY: string,
     setLoading: (loading: boolean) => void,
     setError: (error: string) => void,
     setGifs:(gifs: any[]) => void
 ) => {
-    const API_KEY = process.env["REACT_APP_GIPHY_API_KEY"];
 
     setLoading(true);
     setError('');
