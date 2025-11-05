@@ -100,7 +100,9 @@ const GiphySearch: React.FC = () => {
                         </button>
 
                         <a href={gif.url}
-                            className='giphy-link-btn'>
+                            className='giphy-link-btn'
+                            target='blank'
+                            rel='noopener noreferrer'>
                                 View on Giphy
                         </a>
 
