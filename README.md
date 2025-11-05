@@ -18,8 +18,7 @@ A React-based Giphy search interface built with TypeScript, deployed to AWS usin
 - **Styling**: CSS3 with animations
 - **API**: Giphy API (v1), Axios
 - **Deployment**: AWS (S3, CloudFront) via Serverless Framework
-- **CI/CD**: GitHub Actions
-
+  
 ## Setup
 
 ### Prerequisites
