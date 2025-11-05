@@ -85,8 +85,7 @@ const GiphySearch: React.FC = () => {
                 </div>
             )}
 
-            <div
-                className="results-grid">
+            <div className="results-grid">
                 {gifs.map((gif) => (
                     <div className="gif-card"
                          key={gif.id}
@@ -99,6 +98,11 @@ const GiphySearch: React.FC = () => {
                             onClick={() => copyToClipBoard(gif.bitly_url)}>
                             Copy URL
                         </button>
+
+                        <a href={gif.url}
+                            className='giphy-link-btn'>
+                                View on Giphy
+                        </a>
 
                         <img src={gif.images.fixed_width.url}
                              alt="GIF"

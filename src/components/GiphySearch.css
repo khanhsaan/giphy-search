@@ -86,7 +86,8 @@ h1 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.gif-card:hover .copy-btn{
+.gif-card:hover .copy-btn, 
+.gif-card:hover .giphy-link-btn{
     opacity: 1;
 }
 
@@ -94,6 +95,21 @@ h1 {
     position: absolute;
     background-color: dodgerblue;
     margin: 8px;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0;
+    text-align: center;
+}
+
+.giphy-link-btn {
+    position: absolute;
+    background-color: purple;
+    margin: 8px;
+    margin-top: 48px;
     color: white;
     padding: 8px;
     border: none;

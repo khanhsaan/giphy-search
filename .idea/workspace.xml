@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="845503b9-34a5-4e73-8130-efd97344a30a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giphy-search/src/components/GiphySearch.css" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/src/components/GiphySearch.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giphy-search/src/components/GiphySearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/src/components/GiphySearch.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="845503b9-34a5-4e73-8130-efd97344a30a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
