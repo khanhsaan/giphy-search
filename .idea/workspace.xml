@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="845503b9-34a5-4e73-8130-efd97344a30a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/babel-loader/8528b58e1d134d2ae7078b84c29bbc8a07133ed43f59e3c31b0bdb621c9bacf9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/babel-loader/bfa33f336edea6339dcb6ef323c0ce093b634dcecdfe4764a249ce1cc95c0b11.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/babel-loader/ec4d2fd6e1d3788d90e5fdb9639b1d99d82038f02043c81104805afd55d1e053.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/babel-loader/f51b95d7bb25a0d39a636af5faa29d6cf8e3243bcf1e0c2d72a0185bbde8404b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/2.pack" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/3.pack" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/4.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giphy-search/node_modules/.cache/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/node_modules/.cache/tsconfig.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giphy-search/src/components/GiphySearch.css" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/src/components/GiphySearch.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giphy-search/src/components/GiphySearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/giphy-search/src/components/GiphySearch.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,41 +18,56 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="34tqMVwcYXia4cy20blNCisQbui" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
-    "ts.external.directory.path": "/Users/anthonytran/Desktop/giphy-search/giphy-search/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.localhost:3000.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/anthonytran/Desktop/giphy-search/giphy-search/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/giphy-search/src/hooks" />
+      <recent name="$PROJECT_DIR$/giphy-search/src/components" />
+      <recent name="$PROJECT_DIR$/giphy-search/src" />
       <recent name="$PROJECT_DIR$/giphy-search" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="localhost:3000" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:3000" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -77,7 +83,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762043167429</updated>
-      <workItem from="1762043168517" duration="7509000" />
+      <workItem from="1762043168517" duration="31216000" />
+      <workItem from="1762311615931" duration="1639000" />
     </task>
     <servers />
   </component>
