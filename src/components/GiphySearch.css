@@ -87,8 +87,16 @@ h1 {
 }
 
 .gif-card:hover .copy-btn, 
-.gif-card:hover .giphy-link-btn{
+.gif-card:hover .giphy-link-btn {
     opacity: 1;
+}
+
+.giphy-link-btn:hover{
+    opacity: 0.8 !important;
+}
+
+.copy-btn:hover {
+    opacity: 0.8 !important;
 }
 
 .copy-btn {
@@ -117,9 +125,7 @@ h1 {
     cursor: pointer;
     font-size: 14px;
     opacity: 0;
+    text-decoration: none;
     text-align: center;
-}
-
-.copy-btn:hover {
-    opacity: 0.8;
+    display: inline-block;
 }
