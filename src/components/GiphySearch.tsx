@@ -25,6 +25,7 @@ const GiphySearch: React.FC = () => {
     const[loading, setLoading] = useState<boolean>(false);
     const[error, setError] = useState<string>('');
     const[gifs, setGifs] = useState<GifObject[]>([]);
+    const[searched, setSearched] = useState<boolean>(false);
 
     const phrases = [
         "cute dogs",
@@ -56,7 +57,8 @@ const GiphySearch: React.FC = () => {
                         setLoading,
                         setError,
                         setGifs
-                    )
+                    );
+                    setSearched(true);
                 }}>
                 <input
                     className="search-input"
@@ -73,6 +75,7 @@ const GiphySearch: React.FC = () => {
                 </button>
             </form>
 
+
             {error && (
                 <div className="error">
                     {error}
@@ -82,6 +85,12 @@ const GiphySearch: React.FC = () => {
                 <div className="loader">
                     <div className="spinner">
                     </div>
+                </div>
+            )}
+
+            {searched && (
+                <div className="searched-query">
+                    {query}
                 </div>
             )}
 
