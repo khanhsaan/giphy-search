@@ -74,12 +74,22 @@ h1 {
     padding: 20px;
 }
 
+/* Mobile  */
+@media (max-width: 767px) {
+    .results-grid{
+        column-count: 2;
+        padding: 10px;
+    }
+}
+
 .gif-card {
+    width: 100%;
     margin-bottom: 16px;
     transition: transform 0.2s;
     border-radius: 8px;
     overflow: hidden;
 }
+
 
 .gif-card:hover {
     transform: translateY(-5px);
