@@ -34,7 +34,7 @@
   "bin": "./scripts/bin.js",
   "scripts": {
     "build": "NODE_OPTIONS=--max_old_space_size=8192 GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test --watchAll-false",
+    "test": "react-scripts test --watchAll=false",
     "start": "react-scripts start",
     "deploy:staging": "npm run build && npx serverless deploy --verbose --stage staging --region ap-southeast-2 --aws-profile giphy-search",
     "remove:staging": "npx serverless remove --stage staging --region ap-southeast-2 --aws-profile giphy-search",
