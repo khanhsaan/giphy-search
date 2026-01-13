@@ -16,7 +16,9 @@ async function handleSearch(
     setError('');
 
     try {
-        const minDelay = new Promise(resolve => setTimeout(resolve, 1000));
+        const minDelay = new Promise(resolve => setTimeout(() => {
+            resolve(true)
+        }, 1000));
 
         const [response, _] = await Promise.all([
             axios.get(
@@ -30,11 +32,10 @@ async function handleSearch(
                 }
             ),
             minDelay
-        ]
-        );
+        ]);
 
         if (response.data) {
-            setGifs(response[0].data.data);
+            setGifs(response.data.data);
         } else {
             setError("Failed to fetch searched GIFS");
         }
