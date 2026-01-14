@@ -1,4 +1,5 @@
 import axios from 'axios';
+import minDelay from './minDelay';
 
 async function handleSearch(
     API_KEY: string,
@@ -16,10 +17,6 @@ async function handleSearch(
     setError('');
 
     try {
-        const minDelay = new Promise(resolve => setTimeout(() => {
-            resolve(true)
-        }, 1000));
-
         const [response, _] = await Promise.all([
             axios.get(
                 `https://api.giphy.com/v1/gifs/search`,

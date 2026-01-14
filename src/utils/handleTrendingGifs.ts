@@ -17,8 +17,7 @@ const handleTrendingGifs = async (
                 `https://api.giphy.com/v1/gifs/trending`,
                 {
                     params: {
-                        // eslint-disable-next-line camelcase
-                        api_key: API_KEY,
+                        api_key: API_KEY, // eslint-disable-line camelcase
                         limit: 50,
                     }
                 }
