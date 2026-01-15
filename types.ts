@@ -1,3 +1,4 @@
+// from: https://developers.giphy.com/docs/api/endpoint/#search
 export interface GifObject {
     id: string,
     images: {
@@ -9,4 +10,13 @@ export interface GifObject {
     };
     url: string;
     bitly_url: string;
+}
+
+export interface GiphyContextObject {
+    loading: boolean,
+    error: string,
+    gifs: GifObject[],
+    searchGifs: (query: string) => Promise<void>,
+    fetchTrendingGifs: () => Promise<void>,
+    clearError: () => void
 }
