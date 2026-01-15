@@ -5,20 +5,8 @@ import './GiphySearch.css';
 import useAnimatedPlaceHolder from "../hooks/useAnimatedPlaceHolder";
 import handleTrendingGifs from "../utils/handleTrendingGifs";
 import { on } from 'events';
+import { GifObject } from '../../types';
 
-// from: https://developers.giphy.com/docs/api/endpoint/#search
-interface GifObject {
-    id: string,
-    images: {
-        fixed_width: {
-            url: string;
-            height: string;
-            width: string;
-        }
-    };
-    url: string;
-    bitly_url: string;
-}
 const GiphySearch: React.FC = () => {
     const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
