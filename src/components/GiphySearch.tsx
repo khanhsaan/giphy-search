@@ -1,19 +1,24 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import handleSearch from "../utils/handleSearch";
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import copyToClipBoard from "../utils/copyToClipBoard";
 import './GiphySearch.css';
 import useAnimatedPlaceHolder from "../hooks/useAnimatedPlaceHolder";
-import handleTrendingGifs from "../utils/handleTrendingGifs";
-import { on } from 'events';
-import { GifObject } from '../../types';
+import { useGiphySearchContext } from '../hooks/useGiphySearchContext';
 
 const GiphySearch: React.FC = () => {
     const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
     const [query, setQuery] = useState<string>('');
-    const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string>('');
-    const [gifs, setGifs] = useState<GifObject[]>([]);
+
+    const context = useGiphySearchContext();
+
+    const {
+        loading,
+        error,
+        gifs,
+        searchGifs,
+        fetchTrendingGifs,
+        clearError
+    } = context;
 
     const phrases = [
         "cute dogs",
@@ -25,21 +30,11 @@ const GiphySearch: React.FC = () => {
     let animatedPlaceHolder = useAnimatedPlaceHolder(phrases);
 
     const onSearch = useCallback(() => {
-        handleSearch(
-            API_KEY,
-            query,
-            setLoading,
-            setError,
-            setGifs
-        )
+        searchGifs(query)
     }, [API_KEY, query]);
 
     useEffect(() => {
-        handleTrendingGifs(
-            API_KEY,
-            setLoading,
-            setError,
-            setGifs)
+        fetchTrendingGifs()
     }, [API_KEY]);
 
     return (
