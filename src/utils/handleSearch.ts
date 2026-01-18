@@ -1,13 +1,13 @@
 import axios from 'axios';
+import minDelay from './minDelay';
 
-const handleSearch = async (
+async function handleSearch(
     API_KEY: string,
     query: string,
     setLoading: (loading: boolean) => void,
     setError: (error: string) => void,
     setGifs: (gifs: any[]) => void
-) => {
-
+) {
     // check if the query is not empty
     if (!query.trim()) {
         return;
@@ -17,18 +17,17 @@ const handleSearch = async (
     setError('');
 
     try {
-        const minDelay = new Promise(resolve => setTimeout(resolve, 1000));
         const [response, _] = await Promise.all([
             axios.get(
                 `https://api.giphy.com/v1/gifs/search`,
                 {
                     params: {
-                        // eslint-disable-next-line camelcase
-                        api_key: API_KEY,
+                        api_key: API_KEY, // eslint-disable-line camelcase
                         q: query,
                         limit: 50
                     }
-                }),
+                }
+            ),
             minDelay
         ]);
 

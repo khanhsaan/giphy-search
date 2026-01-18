@@ -1,30 +1,24 @@
-import React, {useEffect, useState} from 'react';
-import handleSearch from "../utils/handleSearch";
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import copyToClipBoard from "../utils/copyToClipBoard";
 import './GiphySearch.css';
 import useAnimatedPlaceHolder from "../hooks/useAnimatedPlaceHolder";
-import handleTrendingGifs from "../utils/handleTrendingGifs";
+import { useGiphySearchContext } from '../hooks/useGiphySearchContext';
 
-// from: https://developers.giphy.com/docs/api/endpoint/#search
-interface GifObject {
-    id: string,
-    images: {
-        fixed_width: {
-            url: string;
-            height: string;
-            width: string;
-        }
-    };
-    url: string;
-    bitly_url: string;
-}
 const GiphySearch: React.FC = () => {
     const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
-    const[query, setQuery] = useState<string>('');
-    const[loading, setLoading] = useState<boolean>(false);
-    const[error, setError] = useState<string>('');
-    const[gifs, setGifs] = useState<GifObject[]>([]);
+    const [query, setQuery] = useState<string>('');
+
+    const context = useGiphySearchContext();
+
+    const {
+        loading,
+        error,
+        gifs,
+        searchGifs,
+        fetchTrendingGifs,
+        clearError
+    } = context;
 
     const phrases = [
         "cute dogs",
@@ -35,28 +29,23 @@ const GiphySearch: React.FC = () => {
     ];
     let animatedPlaceHolder = useAnimatedPlaceHolder(phrases);
 
+    const onSearch = useCallback(() => {
+        searchGifs(query)
+    }, [API_KEY, query]);
+
     useEffect(() => {
-        handleTrendingGifs(
-            API_KEY,
-            setLoading,
-            setError,
-            setGifs)
+        fetchTrendingGifs()
     }, [API_KEY]);
+
     return (
         <div className="giphy-search">
             <h1>Search for a GIF!</h1>
 
             <form
-                className= "search-form"
+                className="search-form"
                 onSubmit={(e) => {
                     e.preventDefault();
-                    handleSearch(
-                        API_KEY,
-                        query,
-                        setLoading,
-                        setError,
-                        setGifs
-                    )
+                    onSearch();
                 }}>
                 <input
                     className="search-input"
@@ -88,8 +77,8 @@ const GiphySearch: React.FC = () => {
             <div className="results-grid">
                 {gifs.map((gif) => (
                     <div className="gif-card"
-                         key={gif.id}
-                         style={{
+                        key={gif.id}
+                        style={{
                             height: `${gif.images.fixed_width.height}px`
                         }}>
 
@@ -103,16 +92,16 @@ const GiphySearch: React.FC = () => {
                             className='giphy-link-btn'
                             target='_blank'
                             rel='noopener noreferrer'>
-                                View on Giphy
+                            View on Giphy
                         </a>
 
                         <img src={gif.images.fixed_width.url}
-                             alt="GIF"
-                             style={{
-                                 width: '100%',
-                                 height: '100%',
-                                 objectFit: 'cover'
-                             }}/>
+                            alt="GIF"
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover'
+                            }} />
                     </div>
                 ))}
             </div>
@@ -120,5 +109,5 @@ const GiphySearch: React.FC = () => {
     )
 }
 
-export default  GiphySearch;
+export default GiphySearch;
 
